@@ -1,0 +1,120 @@
+* {box-sizing: border-box;}
+
+div{ border:1px solid black;}
+
+#container{
+    width: 2000px;
+    margin : auto;
+
+    
+}
+
+.header{
+    display: flex;
+    height: 200px;
+}
+
+.header > div:first-child{
+    flex-basis: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header > div:last-child{
+    flex-basis: 94%;
+}
+
+#home-logo{
+    width: 110px;
+    height: auto;  
+}
+
+.header-mainmenu img{
+    width: 70px;
+    height: 50px;
+}
+
+.mainmenu-center1{
+    display: flex;
+    flex-basis: 50%
+}
+
+.mainmenu-center1 > div{
+    padding :15px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+.right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mainmenu-center1 > input{
+    width: 400px;
+}
+
+
+.header-mainmenu{
+    display: flex;
+    height: 33.3%;
+}
+
+#mainmiddle{
+    display: flex;
+    background-color: rgb(55, 0, 60);
+}
+
+.clublogo{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.mainmenu-center2{
+    flex-basis: 60%
+}
+
+
+.header-mainmenu a{
+    margin-right: 40px;
+    color: gray;
+    font-weight: bold;
+    
+    
+}
+
+.clubsites{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.middle{
+    display: flex;
+    height: 150px;
+}
+
+
+
+
+
+
+.middle2{
+    height: 900px;
+}
+
+.footer{
+    background-color: rgb(55, 0, 60);
+    height: 300px;
+}
