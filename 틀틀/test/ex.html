@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이한규</title>
+
+    <style>
+
+        .main{
+            line-height: 40px;
+        }
+        #password{
+            
+        }
+
+        #btn{
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-bottom: 0;
+            width: 380px;
+            height: 45px;
+            background-color:lightgreen;
+
+            margin-left: 10px;
+            color: darkgreen;
+            font-size: large;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        #input-1{
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-style: dashed;
+
+            outline: none;
+
+            
+        }
+
+        #password{
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-style: dashed;
+
+            outline: none;
+        }
+
+
+        #password1{
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-style: dashed;
+
+            outline: none;
+        }
+
+        #email{
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-style: dashed;
+
+            outline: none;
+        }
+
+        #add{
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-style: dashed;
+            outline: none;
+        }
+
+        #pw2{
+            color: lightgrey;
+            font-size: 13px;
+        }
+
+
+
+
+
+    </style>
+    
+</head>
+<body>
+
+    <div style="border: 1px solid black; width: 400px;" class="main">
+        <table>
+            <tr>
+                <td><b>아이디</b></td>
+                <td><input type="text" id="input-1" style="width: 250px;" ></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <span id="aaa"></span>
+                </td>
+            </tr>
+
+            
+            
+            <tr>
+                <td><b>패스워드</b></td>
+                <td><input type="password" id="password" style="width: 250px;" ></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <span id="pwok"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><span id="pw2"></span></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><b>패스워드 확인</b></td>
+                <td><input type="password" id="password1" style="width: 250px;" ></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <span id="pwok2"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>이메일</b></td>
+                <td><input type="email" style="width: 115px; font-size: 3px;" id="email" >@<input type="email" style="width: 116px;" id="email" ></td>
+                
+            </tr>
+
+            <tr>
+                <td><b>주소</b></td>
+                <td><input type="text" id="add" style="width: 250px;"></td>
+                
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="text" id="add" style="width: 250px;"></td>
+            </tr>
+        </table>
+
+        <button type="submit" id="btn">가입</button>
+    </div>
+
+    <!-- <script>
+
+        document.getElementById("password").addEventListener("click",function(){
+            alert("영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자")
+        })
+        
+    </script> -->
+
+    <script>
+        const inputId = document.getElementById("input-1");
+        const inputPw = document.getElementById("password")
+        const aaa = document.getElementById("aaa");
+        const password1 = document.getElementById("password1")
+        const pwok = document.getElementById("pwok");
+        const email = document.getElementById("email")
+        const pwok2 = document.getElementById("pwok2")
+
+        
+        inputId.addEventListener("blur",function(){
+
+            if(inputId.value == ''){
+                aaa.innerText = "필수 입력 항목입니다.";
+            }else{
+                aaa.innerText = " ";
+            }
+        })
+        
+        inputPw.addEventListener("focus", function(){
+
+
+            pw2.innerText = "영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자"
+            
+
+            if(inputId.value == ''){
+                
+                aaa.innerText = "필수 입력 항목입니다.";
+            }else{
+                aaa.innerText = " ";
+            }
+        })
+
+        password1.addEventListener("focus",function(){
+
+            if(inputPw.value == ""){
+
+                pwok.innerText = "필수 입력 항목입니다.";
+
+            }else{
+                pwok.innerText = " ";
+            }
+        })
+
+        // email.addEventListener("focus",function(){
+
+        //     if(password1.value == ""){
+        //         pwok2.innerText = "필수 입력 항목입니다."
+        //     }else{
+        //         pwok2.innerText = " "
+        //     }
+        // })
+
+        email.addEventListener("click",function(){
+
+            if(inputId.value == '' &  inputPw.value == "" &  password1.value == ""){
+                aaa.innerText = "필수 입력 항목입니다.";
+                pwok.innerText = "필수 입력 항목입니다.";
+                pwok2.innerText = "필수 입력 항목입니다."
+            } else {
+                aaa.innerText = "";
+                pwok.innerText = "";
+                pwok2.innerText = "";
+            }
+        })
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
